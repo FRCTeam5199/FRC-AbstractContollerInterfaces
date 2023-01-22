@@ -1,6 +1,7 @@
 package frc.controllers.basecontrollers;
 
 import edu.wpi.first.wpilibj.Joystick;
+import frc.controllers.ButtonPanelController;
 
 import java.util.function.Function;
 
@@ -78,6 +79,7 @@ public abstract class BaseController {
         JOYSTICK_CONTROLLER(JoystickController::new),
         SIX_BUTTON_GUITAR_CONTROLLER(SixButtonGuitarController::new),
         WII_CONTROLLER(WiiController::new),
+        BUTTON_PANEL(ButtonPanelController::new),
         XBOX_CONTROLLER(XBoxController::new);
 
         private final Function<Integer, BaseController> constructor;
